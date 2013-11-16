@@ -1,0 +1,128 @@
+  <style>
+
+
+    body {
+      color: #5a5a5a;
+      height: 100%;
+
+    }
+    .nav li a {
+      font-size: 12px;
+    }
+
+    /* customizar la barra de navegacion ..*/
+    .dropdown-menu .sub-menu {
+        visibility: hidden;
+    }
+    .dropdown-menu li:hover .sub-menu {
+        visibility: visible;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .navbar .brand { 
+      max-height: 40px; 
+      overflow: visible;
+      padding-top: 0;
+      padding-bottom: 20px;/*el logo de casco moto*/
+    }
+    .navbar .container {
+      min-height: 50px; 
+    }
+
+  </style>
+
+
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+
+        <!-- salida y login  -->
+        <ul class="nav pull-right">
+          <li><a href="#exit"><img src="img/exit.png" width="30px" style="padding-right:5px"/>Salir</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="#login-modal" data-toggle="modal"><img src="img/usuario.png" width="30px" style="padding-right:5px"/>Entrar</a></li>
+        </ul>
+
+        <div class="container" style="padding-top: 1px;"><!-- Collapsable nav bar -->
+          
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><!-- los botones que hacen aparecer el menu cuando esta colapsado-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <!-- el logo de casco moto -->
+          <a class="brand" href="index.html" >
+            <img src="img/logo.png" alt="CASCO MOTO" height="100px"/>
+          </a>
+     
+          <!-- empieza el contenido de la nav bar -->
+          <div class="nav-collapse" ><!-- Contenido que se esconde a menos de 940px -->
+            <ul class="nav">
+                    <li style="padding-top: 10px;"><a href="index.html" title="CascoMoto, desde 1999 dando seguridad">INICIO</a></li>
+                    <li class="dropdown" style="padding-top: 10px;"><!-- desplegable tipos de casco-->
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">TIPOS<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-header">CASCOS INTEGRALES:</li>
+                        <li><a href="cascos-carretera.html">Carretera</a></li>
+                        <li><a href="cascos-modulares.html">Modulares</a></li>
+                        <li><a href="cascos-chica.html">Chica</a></li>
+                        <li class="divider"></li>
+                        <li class="nav-header">CASCOS ABIERTOS:</li>
+                        <li><a href="cascos-clasicos.html">Clasic y Jet</a></li>
+                        <li><a href="cascos-novelty.html">Novelty</a></li>
+                        <li class="divider"></li>
+                        <li class="nav-header">CASCOS OFF-ROAD:</li>
+                        <li><a href="cascos-cross.html">Motocross</a></li>
+                        <li><a href="cascos-nieve.html">Nieve</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown" style="padding-top: 10px;"><!-- desplegable marcas cascos-->
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">MARCAS<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="cascos-bell">Bell</a></li>
+                        <li><a href="cascos-shoei.html">Shoei</a></li>
+                        <li><a href="cascos-agv">AGV</a></li>
+                      </ul>
+                    </li>
+                    <li style="padding-top: 10px;"><a href="customiza.html" title="CascoMoto, desde 1999 dando seguridad">CUSTOMIZA</a></li>
+                    <li style="padding-top: 10px;"><a href="nosotros.html" title="CascoMoto, desde 1999 dando seguridad">NOSOTROS</a></li>
+
+                    <li class="divider-vertical"></li>
+                    <li >
+                      <a class="carrito" href="carrito.html" title="Ver Carrito"><img src="img/carrito.png" alt="cesta compra" width="30px" /><br/>0 artículos<!-- carrito compra-->
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="nosotros.html" title="Llámanos"><img src="img/phone.png" alt="telefono" width="30px" /><br/>93 456 12 12</a>
+                    </li><!-- teléfono att-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar-inner -->
+ </div><!--/.navbar -->
+
+    <!-- LOGIN MODAL: id="login-modal" =================================================================================-->
+    <div class="modal hide fade" id="login-modal">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h1>Entra en cascomoto</h1>
+      </div> 
+      <div class="modal-body">
+        <fieldset>
+          <h5>Si ya estas registrado en casco-moto utiliza tu usuario para entrar</h5>
+          <input type="text" placeholder="Usuario o email" name="username" maxlength="30" id="id_username" />
+          <input type="password" placeholder="Contraseña" name="password" id="id_password" />
+          <input type="submit" value="ENTRAR" class="btn btn-cascomoto">
+        </fieldset>
+      </div>
+      <div class="modal-footer">
+        <a href="/accounts/password/reset/"><span>¿Olvidaste tu contraseña?</span></a> &middot; <a href="/signup/"><span>Regístrate en CascoMotos</span></a>
+        <button class="btn" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+    <script>
+      var myArray = JSON.parse(sessionStorage.getItem('listaCompra')) || [];
+      var numArticulos=myArray.length;
+        $(".navbar").find(".carrito").html('<img src="img/carrito.png" alt="cesta compra" width="30px" /><br/>'+numArticulos+" artículos");
+    </script>
