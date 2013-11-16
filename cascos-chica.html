@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Casco&middot;Motos - CHICA</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casco moto es la mejor tienda online al oeste del río Pecos, ah! y vendemos Cascos">
+    <meta name="author" content="casco motos">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon"/>
+
+    <!-- styles -->
+    <link href="css/bootstrap-cascomoto.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <!-- BARRRA DE NAVEGACION - MENUS
+    ================================================== 
+    ================================================== -->
+    <div id="barra-nav">
+      <!--aquí va la barra de navegacion: barra-nav.html -->
+    </div>
+
+    <!-- IMAGEN CABECERA: CASCOS-CARRETERA
+    ================================================== 
+    ================================================== -->
+    <div id="cabecera" style="background: #808080 url(img/cascochica.jpg);">
+      
+      <div class="container" >
+        <div class="cabeceraContenido">
+          <h3 class="american_font"><em>CASCOS</em></h3>
+          <h1 class="american_font"><em>PARA CHICAS</em></h1>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CASCOS CARRETERA
+    ================================================== 
+    ================================================== -->
+    <div id="cascos_modulares">
+      <div class="container">
+
+        <div class="chicaurbangirl"> <!-- PRIMERA FILA DE CASCOS -->
+          <h1>Línea URBAN GIRL</h1>
+          <p>Los URBAN son los reyes de la ciudad, permiten convertir tu casco en abierto o integral según la situación en la que te encuentres. Sin duda una buena elección.</p>
+          <div class="row" style="margin-top:30px; text-align:center"></div>
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.marketing -->
+
+    <!-- FOOTER
+    ================================================== 
+    ================================================== -->
+    <div id="footer">
+      <!--aquí va el footer: footer.html -->
+    </div>
+
+    <!-- MODALS (CASCOS, LOGIN, SIGNUP)
+    ================================================== 
+    ================================================== -->
+    
+    <!-- MODAL TOTAL -->
+    <div id="modalTotal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="nombreCascoModal">Nombre Modelo Casco</h3>
+      </div>
+      <div class="modal-body">
+        <div><img id="imagenModal" src="" style="width:330px; align:center;"></div>
+        <p id="marcaModal">Marca del Casco</p>
+        <ul class="inline">Descripción:
+          <li id="caractModal">Flow Ventilation</li>
+          <li id="pesoModal">Peso: 1500gr</li>
+          <li id="precioModal">Precio: 200€</li>
+          <li id="precioCasco" class="precio" style="display:none">valor</li><!--este solo lo relleno para tener el precio en numero-->
+        </ul>
+        <ul class="inline">TALLAS DISPONIBLES:
+          <li><span class="badge badge-inverse">XS</span></li>
+          <li><span class="badge badge-inverse">S</span></li>
+          <li><span class="badge badge-inverse">M</span></li>
+          <li><span class="badge badge-inverse">L</span></li>
+          <li><span class="badge badge-inverse">XL</span></li>
+          <li><span class="badge badge-inverse">XXL</span></li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-cascomoto addCarrito"><i class="icon-white icon-shopping-cart"></i> COMPRAR</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Salir</button>
+        <!--<button class="btn addCarrito" style="display:block;"><strong>COMPRAR</strong> </button>-->
+      </div>
+    </div>
+
+
+    <!-- Le javascript
+    ================================================== 
+    ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/cascos.js"></script>
+
+     <!-- popover1-->
+    <script>
+        $(function () { 
+          $("#popover1").popover();  
+        });
+        $(function () { 
+          $("#popover").popover();  
+        });
+    </script>
+
+    <script src="js/holder.js"></script>
+    <script src="js/funciones.js"></script>
+
+
+
+  </body>
+</html>
