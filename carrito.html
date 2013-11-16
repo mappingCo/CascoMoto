@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Casco&middot;Motos - CARRITO</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casco moto es la mejor tienda online al oeste del río Pecos, ah! y vendemos Cascos">
+    <meta name="author" content="casco motos">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon"/>
+
+    <!-- styles -->
+    <link href="css/bootstrap-cascomoto.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+     <link href="form/style.css" rel="stylesheet">
+  
+  </head>
+
+  <body>
+
+    <!-- BARRRA DE NAVEGACION - MENUS
+    ================================================== 
+    ================================================== -->
+    <div id="barra-nav">
+      <!--aquí va la barra de navegacion: barra-nav.html -->
+    </div>
+
+    <div id="carritoCompra">
+
+    <!-- LISTA CARRITO COMPRA
+    ================================================== 
+    ================================================== -->
+    
+    <div  class="container">
+        <div class="row">
+          <h3>Tu lista de la compra</h3>
+          <h4 id="listaVacia">En este momento no tienes ningún artículo en tu lista de la compra</h4>
+          <table  id="tablaLista" class="table table-bordered table-hover">  
+            <thead>  
+              <tr>  
+                <th>Modelo</th>  
+                <th>Talla</th>  
+                <th>Precio</th>  
+                <th>Unidades</th>  
+              </tr>  
+            </thead>  
+            <tbody id="listaCompra"  >
+              <tr style="display:none">  
+                <td>Modelo1</td>  
+                <td>xx </td>  
+                <td>266</td>  
+                <td>1</td>  
+                <td>
+                  <a href="#" class="close">&times;</a>BORRAR
+                </td>
+              </tr>     
+            </tbody>  
+          </table> 
+
+          <table id="tablaCosteFinal" class="table table-bordered">  
+            <thead>  
+              <tbody id="costeFinal">
+              </tbody> 
+            </thead>  
+          </table> 
+        </div>
+    </div>
+    
+    <!-- RELLENAR DATOS ENVIO Y PAGO
+    ================================================== 
+    ================================================== -->
+    <div id="datosCliente">
+      <div class="container">
+        <div class="row">
+            <h3>Datos de envio</h3>
+            <h5>Si ya estas registrado en casco-moto utiliza tu usuario para entrar:</h5>
+        </div>
+          
+        <fieldset> 
+            <input type="text" placeholder="Usuario o email" name="username" maxlength="30" id="id_username" />
+            <input type="password" placeholder="Contraseña" name="password" id="id_password" />
+            <input type="submit" value="ENTRAR" class="btn btn-cascomoto">
+        </fieldset>
+          
+        <div class="row">
+        
+          <h5>Si no estás registrado en casco-Moto introduce tus datos personales:</h5>
+
+          <!-- FORMULARIO DIRECCION -->
+          <div class="span6">
+            <h5>Datos Postales</h5>
+            <form action="" id="formularioPostal" class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="name">Nombre</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="name" id="inputNombre" placeholder="Nombre">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="name">Apellidos</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="name" id="inputApellidos" placeholder="Apellido1 Apellido2">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="email" id="inputEmail" placeholder="email">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="name">Dirección</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="name" id="inputCalle" placeholder="Calle, Portal, Piso">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="codigo">Código Postal</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="codigo" id="inputCodigo" placeholder="Codigo Postal">
+                </div>
+              </div>
+            </form>
+          </div><!-- span -->
+          <!-- FORMULARIO DATOS BANCARIOS -->
+          <div class="span6">
+            <h5>Datos Bancarios</h5>
+            <form action="" id="formularioBanco" class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="tarjeta">Número Tarjeta</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="tarjeta" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="caducidad">Fecha Caducidad</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="caducidad" id="inputFechaExp" placeholder="DD/MM">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="cvv">CVV</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="cvv" id="inputCVV" placeholder="Tres últimos dígitos del número verificación">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="name">Nombre Titular</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="name" id="inputNombreCard" placeholder="Nombre Titular Tarjeta">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="name">Apellido Titular</label>
+                <div class="controls">
+                  <input type="text" class="input-xlarge" name="name" id="inputApellidosCard" placeholder="Apellidos Titular Tarjeta">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <label class="checkbox">
+                    <input id="copiar" type="checkbox"> Mismo Titular que datos envio
+                  </label>
+                  <button id="confirmar" type="submit" class="btn">Confirmar Datos</button>
+                </div>
+              </div>
+
+              <a id="validarCompra" class="btn btn-large btn-danger" type="button" href="#" target="_blank" style="float: right;">CONFIRMAR COMPRA</a>
+
+     
+
+            </form>
+          </div><!-- span -->
+        </div><!-- row -->
+      </div>
+    </div>
+
+    </div><!--fin id carritoCompra-->
+
+
+
+
+ 
+
+
+
+
+
+
+    <!-- FOOTER
+    ================================================== 
+    ================================================== -->
+    <div id="footer">
+      <!--aquí va el footer: footer.html -->
+    </div>
+
+
+    <!-- Le javascript
+    ================================================== 
+    ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+
+    <script src="js/cascos.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/carrito.js"></script>
+
+<!-- pruebas formulario -->
+
+    <script src="form/jquery.validate.js"></script>
+    <script src="form/script.js"></script>
+
+
+
+
+
+  </body>
+</html>
